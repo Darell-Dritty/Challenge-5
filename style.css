@@ -24,3 +24,7 @@ img {
 .cart-items + .cart-items{
     padding: 2% 0;
 }
+
+.price-details h6{
+    padding: 3% 2%;
+}
