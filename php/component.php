@@ -53,9 +53,9 @@ function cartElement($productid, $productname, $productprice, $productimg){
             </div>
             <div class=\"col-md-3 py-5\">
                 <div>
-                    <button type=\"button\" id=\"btn_min\" onClick=\"min();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-minus\"></i></button>
+                    <button type=\"button\" id=\"btn_min\" onClick=\"decreaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-minus\"></i></button>
                     <input type=\"text\" id=\"number\" value=\"1\" class=\"form-control w-25 d-inline\">
-                    <button type=\"button\" id=\"btn_plus\" onClick=\"plus();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-plus\"></i></button>
+                    <button type=\"button\" id=\"btn_plus\" onClick=\"increaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-plus\"></i></button>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ class createDb
         $dbname="Newdb",
         $tablename="Product_db",
         $servername="localhost",
-        $username="root",
+        $username="challenge5groep2",
         $password=""
     )
     {

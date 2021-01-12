@@ -1,14 +1,14 @@
-function plus(){
-    var aantal = parseInt (document.getElementById('number').aantal, 10);
-    aantal = isNaN(aantal) ? 0 : aantal;
-    aantal++;
-    document.getElementById('number').value = aantal;
+function increaseValue(){
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
 }
 
-function min(){
-    var aantal = parseInt (document.getElementById('number').aantal, 10);
-    aantal = isNaN(aantal) ? 0 : aantal;
-    aantal < 1 ? aantal = 1 : '';
-    aantal--;
-    document.getElementById('number').value = aantal;
+function decreaseValue(){
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value < 1 ? value = 1 : '';
+    value--;
+    document.getElementById('number').value = value;
 }
