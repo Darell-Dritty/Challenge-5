@@ -1,6 +1,6 @@
 <?php
 
-function component($productname, $productprice, $productimg, $productid){
+function component($productname, $productprice, $productimg, $productid, $description){
     $element = "
 
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">
@@ -15,10 +15,9 @@ function component($productname, $productprice, $productimg, $productid){
               <i class=\"fas fa-star\"></i>
             </h6>
             <p class=\"card-text\">
-              Some quick example text to build on the card.
+              $description
             </p>
             <h5>
-              <small><s class=\"text-secondary\">$5,19</s></small>
               <span class=\"price\">$$productprice</span>
             </h5>
 
@@ -46,15 +45,13 @@ function cartElement($productid, $productname, $productprice, $productimg){
             </div>
             <div class=\"col-md-6\">
                 <h5 class=\"pt-2\">$productname</h5>
-                <small class=\"text-secondary\">Seller: dailytuition</small>
                 <h5 class=\"pt-2\">$$productprice</h5>
-                <button type=\"submit\" class=\"btn btn-warning\">Save for Later</button>
                 <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\">Remove</button>
             </div>
             <div class=\"col-md-3 py-5\">
                 <div>
                     <button type=\"button\" id=\"btn_min\" onClick=\"decreaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-minus\"></i></button>
-                    <input type=\"text\" id=\"number\" value=\"1\" class=\"form-control w-25 d-inline\">
+                    <input type=\"number\" id=\"number\" min=\"1\" value=\"1\" class=\"w-25 d-inline\">
                     <button type=\"button\" id=\"btn_plus\" onClick=\"increaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-plus\"></i></button>
                 </div>
             </div>
@@ -66,3 +63,6 @@ function cartElement($productid, $productname, $productprice, $productimg){
 echo  $element;
 
 }
+
+// <button type=\"button\" id=\"btn_min\" onClick=\"decreaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-minus\"></i></button>
+// <button type=\"button\" id=\"btn_plus\" onClick=\"increaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-plus\"></i></button>

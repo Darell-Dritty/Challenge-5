@@ -14,7 +14,7 @@ class createDb
         $dbname="Newdb",
         $tablename="Product_db",
         $servername="localhost",
-        $username="challenge5groep2",
+        $username="root",
         $password=""
     )
     {
@@ -45,7 +45,8 @@ class createDb
             (id INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
             product_name VARCHAR (25) NOT NULL,
             product_price FLOAT,
-            product_image VARCHAR (100)
+            product_image VARCHAR (100),
+            product_description VARCHAR (50)
             );";
 
             if(!mysqli_query($this->con, $sql)){

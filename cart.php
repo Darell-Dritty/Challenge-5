@@ -86,15 +86,14 @@
                             }else 
                                 echo "<h6>Price (0 items)</h6>";
                         ?>
-                        <h6>Delivery Charges</h6>
                         <hr>
-                        <h6>Amount Payable</h6>
+                        <h6>Total</h6>
+                        <button type="submit" class="btn btn-primary my-3" value="Place order" name="placeorder">Place Order</button>
                     </div>
                     <div class="col-md-6">
                             <h6>$ <?php echo $total; ?></h6>
-                            <h6 class="text-success">FREE</h6>
                             <hr>
-                            <h6>$<?php 
+                            <h6>$ <?php 
                                 echo $total;
                             ?></h6>
                     </div>
@@ -104,11 +103,13 @@
     </div>
 </div>    
 
-
-
-
-
-
+<?php
+// Send the user to the place order page if they click the Place Order button, also the cart should not be empty
+if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+    echo "<script>window.location = 'placeorder.php'</script>";
+    exit;
+}
+?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
