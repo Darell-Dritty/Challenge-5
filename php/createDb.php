@@ -44,7 +44,7 @@ class createDb
             $sql = "CREATE TABLE IF NOT EXISTS $tablename
             (id INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
             product_name VARCHAR (25) NOT NULL,
-            product_price FLOAT,
+            product_price DECIMAL,
             product_image VARCHAR (100),
             product_description VARCHAR (50)
             );";
@@ -69,3 +69,4 @@ class createDb
         }
     }
 }
+

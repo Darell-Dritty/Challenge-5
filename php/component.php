@@ -11,14 +11,11 @@ function component($productname, $productprice, $productimg, $productid, $descri
           </div>
           <div class=\"card-body\">
             <h5 class=\"card-title\">$productname</h5>
-            <h6>
-              <i class=\"fas fa-star\"></i>
-            </h6>
             <p class=\"card-text\">
               $description
             </p>
             <h5>
-              <span class=\"price\">$$productprice</span>
+              <span class=\"price\">&euro; $productprice</span>
             </h5>
 
             <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart<i class=\"fas fa-shopping-cart\"></i></button>
@@ -45,13 +42,13 @@ function cartElement($productid, $productname, $productprice, $productimg){
             </div>
             <div class=\"col-md-6\">
                 <h5 class=\"pt-2\">$productname</h5>
-                <h5 class=\"pt-2\">$$productprice</h5>
+                <h5 class=\"pt-2\">&euro;$productprice</h5>
                 <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\">Remove</button>
             </div>
             <div class=\"col-md-3 py-5\">
                 <div>
                     <button type=\"button\" id=\"btn_min\" onClick=\"decreaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-minus\"></i></button>
-                    <input type=\"number\" id=\"number\" min=\"1\" value=\"1\" class=\"w-25 d-inline\">
+                    <input type=\"text\" id=\"number\" min=\"1\" value=\"1\" class=\"w-25 d-inline\">
                     <button type=\"button\" id=\"btn_plus\" onClick=\"increaseValue();\" class=\"btn bg-light border rounded-circle\"><i class=\"fas fa-plus\"></i></button>
                 </div>
             </div>
